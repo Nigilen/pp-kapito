@@ -36,13 +36,19 @@
 
 @media screen and ( max-width: 768px )
   .nav
-    
+    position: relative
+    z-index: -1
     justify-self: center
-    width: 100%
-    background-color: rgba(100, 39, 39, 0.8)
+    margin: 0 -20px
+    width: 100vw
+    max-width: 100vw
+    top: -100vw
+    max-height: 0px
+    transition-duration: .4s
+    &--active
+      top: 0vw
+      max-height: 500px
     &__list
-      position: relative
-      top: -100%
       display: grid
       grid-template-rows: auto
       row-gap: 10px
@@ -58,13 +64,6 @@
       display: block
       width: 25px
       height: 20px
-      margin: 0
-      padding: 0
-      border: none
-      outline: none
-      cursor: pointer
-      background-color: transparent
-      
       & span
         position: absolute
         top: 0
