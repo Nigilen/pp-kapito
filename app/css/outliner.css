@@ -1,0 +1,35 @@
+header,
+main section,
+article,
+footer {
+  
+  outline: 1px solid rgb(144, 60, 204);
+  outline-offset: -1px;
+}
+
+ul, ol, dl, li {
+  outline: 1px solid rgb(120, 170, 245);
+  outline-offset: -1px;
+}
+
+.container,
+.wrapper {
+  outline: 1px solid rgb(255, 0, 234);
+  outline-offset: -1px;
+}
+
+h1, h2, h3, p { 
+  outline: 2px solid rgb(121, 122, 121);
+  outline-offset: -1px;
+}
+
+img {
+  outline: 3px solid rgb(142, 208, 224);
+  outline-offset: -1px;
+}
+
+
+a {
+  outline: 1px solid rgb(189, 106, 51);
+  outline-offset: -1px;
+}
