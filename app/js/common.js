@@ -1,4 +1,4 @@
-let burger = document.querySelector('.nav__burger');
+let burger = document.querySelector('.burger');
 let menu = document.querySelector('.nav');
 
 let openMenu = function() {

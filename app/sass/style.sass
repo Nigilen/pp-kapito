@@ -1,39 +1,26 @@
-@font-face
-  font-family: "Nexa Script"
-  src: url('/fonts/Nexa Script.woff')
-  font-style: normal
-  font-weight: 400
-
+@import _fonts.sass
 
 body 
   margin: 0
   padding: 0
   font-family: "Arial"
 
-
-.nihil-list 
-  margin: 0
-  padding: 0
-  list-style: none
-
+.visually-hidden 
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+  overflow: hidden
+  width: 1px
+  height: 1px
+  clip: rect(1px, 1px, 1px, 1px)
+  
 
 .container
   max-width: 1320px
   margin: 0 auto  
-  padding: 0 20px
-  
 
-.wrapper 
-  display: grid
-  grid-template-columns: auto auto
-  align-items: center
-  
 
-  @media screen and (max-width: 768px)
-    &--column
-      position: relative
-      grid-template-columns: auto
-      
 .button 
   margin: 0
   padding: 0
@@ -43,4 +30,10 @@ body
   background-color: transparent  
 
 
+.list
+  margin: 0
+  padding: 0
+  list-style: none
+
 @import _header.sass
+@import _s-promo.sass
