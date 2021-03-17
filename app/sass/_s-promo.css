@@ -1,0 +1,49 @@
+.promo {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  height: 100vh;
+  background-color: #212121;
+  background-image: url("/img/promo.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  overflow: hidden;
+}
+.promo__title {
+  margin-bottom: 15px;
+  font-family: "Nexa Script";
+  font-size: 10vh;
+}
+.promo__subtitle {
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.promo__icon {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 80px;
+}
+.promo__icon:before {
+  content: "";
+  transform: scaleX(-1) rotate(90deg);
+  background-image: url("/img/arrow.svg");
+  background-position: center;
+  background-size: 95%;
+  width: 50px;
+  height: 100%;
+}
+.promo__icon:after {
+  content: "";
+  transform: rotate(90deg);
+  background-image: url("/img/arrow.svg");
+  background-position: center;
+  background-size: 95%;
+  width: 50px;
+  height: 100%;
+}
