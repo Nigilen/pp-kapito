@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: 'Arial', sans-serif; }
 
 .visually-hidden {
   position: absolute;
@@ -126,7 +126,7 @@ body {
   .promo__title {
     margin-bottom: 15px;
     font-family: "Nexa Script";
-    font-size: 10vh; }
+    font-size: 8vh; }
   .promo__subtitle {
     margin: 0 0 40px 0;
     text-transform: uppercase;
@@ -156,34 +156,95 @@ body {
       width: 50px;
       height: 100%; }
 
-.footer-wrapper {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  display: grid;
-  grid-template-rows: 350px auto auto;
-  justify-items: stretch;
-  row-gap: 100px; }
+.about {
+  background-color: #f3f3f0; }
+  .about__wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: minmax(200px, 500px);
+    justify-content: center;
+    padding: 80px 10px;
+    row-gap: 20px;
+    text-align: center; }
+  .about__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; }
+  .about__title {
+    font-family: "Nexa Script";
+    font-size: 8vh;
+    font-weight: 100;
+    margin-bottom: 5px;
+    margin-top: 0;
+    white-space: nowrap; }
+  .about__subtitle {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #917529;
+    text-transform: uppercase;
+    font-weight: 600; }
+    .about__subtitle::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 50px;
+      left: 45.5%;
+      transform: rotate(45deg);
+      background-color: #6d6d6d;
+      box-shadow: 10px -10px 0 0 #6d6d6d, 20px -20px 0 0 #6d6d6d; }
+  .about__text {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 30px; }
 
-.contacts-block {
-  display: grid;
-  grid-template-rows: auto;
-  justify-content: center;
-  row-gap: 30px; }
+@media screen and (min-width: 768px) {
+  .about__wrapper {
+    grid-template-rows: auto;
+    grid-template-columns: 40% 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 10%;
+    row-gap: 0;
+    column-gap: 13%;
+    text-align: center; } }
 
-.map-block {
+.footer {
+  background-color: #0a0a0a; }
+  .footer-wrapper {
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: 350px auto auto;
+    justify-items: stretch;
+    row-gap: 100px;
+    max-width: 1320px;
+    margin: 0 auto; }
+
+.map {
   background-image: url("/img/map.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   filter: invert(0.2); }
 
+.contacts {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  row-gap: 30px; }
+  .contacts-item {
+    padding: 5px; }
+
 .adress-list,
 .shedule-list,
 .social-list {
   margin: 0;
   padding: 0;
-  list-style: none;
   width: max-content;
+  list-style: none;
   font-size: 12px;
   color: #919191; }
 
@@ -193,19 +254,16 @@ body {
     text-decoration: none;
     color: #919191; }
 
-.contacts-item {
-  padding: 5px; }
-
 .shedule__time {
   margin: 0; }
 
-.bottom-block {
+.bottom {
   display: grid;
   grid-template-columns: 80%;
   row-gap: 40px;
   justify-content: center;
   justify-items: center; }
-  .bottom-block p {
+  .bottom p {
     font-size: 11px;
     color: #515151; }
 
@@ -215,22 +273,22 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-items: stretch;
     row-gap: 50px; }
-  .contacts-block {
-    order: -1;
+  .contacts {
+    padding: 40px 40px 30px 40px;
+    justify-content: start;
     grid-template-rows: auto;
     grid-template-columns: repeat(3, auto);
-    justify-content: start;
     row-gap: 0;
     column-gap: 40px;
-    padding: 40px 40px 30px 40px; }
-  .bottom-block {
-    grid-template-columns: auto auto;
-    row-gap: 0;
-    column-gap: 40px;
+    order: -1; }
+  .bottom {
+    padding: 0 40px 40px 40px;
     justify-content: start;
     justify-items: start;
     align-items: center;
-    padding: 0 40px 40px 40px; }
-  .map-block {
+    grid-template-columns: auto auto;
+    row-gap: 0;
+    column-gap: 40px; }
+  .map {
     grid-row: 1/3;
     grid-column: 2/3; } }

@@ -1,0 +1,56 @@
+.about
+  background-color: #f3f3f0
+  &__wrapper
+    display: grid
+    grid-template-rows: repeat(2, auto)
+    grid-template-columns: minmax(200px, 500px)
+    justify-content: center
+    padding: 80px 10px
+    row-gap: 20px
+    text-align: center
+  &__img
+    width: 100%
+    height: auto
+    object-fit: contain
+  &__title
+    font-family: "Nexa Script";
+    font-size: 8vh
+    font-weight: 100
+    margin-bottom: 5px
+    margin-top: 0
+    white-space: nowrap
+  &__subtitle
+    position: relative
+    margin-top: 0
+    margin-bottom: 50px
+    font-size: 24px
+    letter-spacing: 5px
+    color: #917529
+    text-transform: uppercase
+    font-weight: 600
+    &::before
+      content: ""
+      position: absolute
+      width: 5px
+      height: 5px
+      top: 50px
+      left: 45.5%
+      transform: rotate(45deg)
+      background-color: #6d6d6d
+      box-shadow: 10px -10px 0 0 #6d6d6d, 20px -20px 0 0 #6d6d6d
+
+  &__text
+    font-family: 'Times New Roman', serif
+    font-size: 18px
+    line-height: 30px
+
+@media screen and ( min-width: 768px )
+  .about__wrapper
+    grid-template-rows: auto
+    grid-template-columns: 40% 50%
+    justify-content: center
+    align-items: center
+    padding: 120px 10%
+    row-gap: 0
+    column-gap: 13%
+    text-align: center
