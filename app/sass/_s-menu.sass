@@ -1,0 +1,91 @@
+.menu-wrapper
+  display: grid
+  justify-content: center
+  justify-items: center
+  padding: 120px 30px
+
+.menu-list
+  margin-top: 50px
+  display: grid
+  row-gap: 40px
+  font-size: 13px
+
+
+.menu-item
+  display: grid
+  grid-template-columns: 80% 20%
+  grid-template-rows: auto
+  row-gap: 10px
+  & dd
+    margin: 0
+
+.special
+  position: relative
+
+.special:before 
+  content: ""
+  position: absolute
+  background-image: url('/img/bookmark.svg')
+  background-size: cover
+  background-position: center
+  top: -5px
+  left: -20px
+  display: block
+  width: 15px
+  height: 120%
+
+
+
+.menu__dish
+  display: grid
+  grid-template-columns: max-content auto
+  text-transform: uppercase
+  font-weight: 600
+  &::after
+    content: ""
+    align-self: flex-end
+    border-bottom: 2px dotted #b1b1b1
+    margin: 0 5px
+    width: auto
+    height: 1px
+
+.menu__consist
+  order: 2
+  font-size: 12px
+  font-family: 'Times New Roman', Times, serif
+
+.menu__price
+  font-weight: 600
+
+.wrapper-herznaet
+  display: grid
+  grid-template-columns: auto auto
+  
+  
+
+.toggles-list
+  position: sticky
+  top: 100px
+  margin: 0
+  padding: 0
+  list-style: none
+  outline: 1px solid red
+  align-self: flex-start
+  margin-right: -19px
+
+.toggles-item
+  outline: 1px solid orange
+  width: 20px
+  height: 100px
+  writing-mode: vertical-lr
+  text-align: center
+  
+
+.menu-container
+  position: relative
+  display: grid
+  grid-template-columns: auto auto
+
+
+.menu-toggles--desctop
+  display: none
