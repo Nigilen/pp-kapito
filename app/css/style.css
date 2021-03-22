@@ -243,6 +243,8 @@ body {
   padding: 120px 30px; }
 
 .menu-list {
+  position: absolute;
+  opacity: 0;
   margin-top: 50px;
   display: grid;
   row-gap: 40px;
@@ -311,6 +313,14 @@ body {
 
 .menu-toggles--desktop {
   display: none; }
+
+.menulist-wrapper {
+  display: flex; }
+
+.menu-list--active {
+  position: relative;
+  opacity: 1;
+  width: 100%; }
 
 @media screen and (min-width: 640px) {
   .toggles-list {
