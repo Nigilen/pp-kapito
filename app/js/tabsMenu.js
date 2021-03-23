@@ -15,7 +15,9 @@ for (let i = 0; i < menuList.length; i++) {
   toggleDescItems[i].addEventListener('click', function() {
     for (let j = 0; j < menuList.length; j++) {
       menuList[j].classList.remove('menu-list--active');
+      toggleDescItems[j].classList.remove('active');
     }  
     menuList[i].classList.add('menu-list--active');
+    toggleDescItems[i].classList.add('active');
   });
 };

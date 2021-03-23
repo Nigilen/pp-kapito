@@ -23,19 +23,19 @@
         <nav class="nav">
           <ul class="list nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">Главная</a>
+              <a class="nav__link" href="#promo">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Меню</a>
+              <a class="nav__link" href="#menu">Меню</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Бронирование</a>
+              <a class="nav__link" href="#booking">Бронирование</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">О нас</a>
+              <a class="nav__link" href="#about">О нас</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -50,7 +50,7 @@
 
   <main class="main">
     <h1 class="visually-hidden">Header 1</h1>
-    <section class="promo">
+    <section class="promo" id="promo">
       <p class="promo__title">Легендарный вкус</p>
       <p class="promo__subtitle">В самом сердце Кёнигсберга</p>
       <div class="promo__icon">
@@ -58,7 +58,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about-column">
@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="advantages-wrapper">
         <h2 class="section-title advantages__title">Signature Recipies</h2>
         <p class="section-subtitle advantages__subtitle">Reinvented</p>
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section class="menu">
+    <section class="menu" id="menu">
       <div class="menu-container">
         <div class="menu-wrapper">
           <h2 class="section-title">The Menus</h2>
@@ -311,21 +311,23 @@
 
             
             <ul class="toggles-list">
-              <li class="toggles-item"><span>1</span></li>
-              <li class="toggles-item">2</li>
-              <li class="toggles-item">3</li>
-              <li class="toggles-item">4</li>
-              <li class="toggles-item">5</li>
+              <li class="toggles-item">specialites</li>
+              <li class="toggles-item">appetizers</li>
+              <li class="toggles-item">main-meals</li>
+              <li class="toggles-item">desserts</li>
+              <li class="toggles-item">drink</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="menu-toggles--desktop">
         <ul class="toggles--desktop">
-          <li class="toggle-item--desktop">
+          <li class="toggle-item--desktop active">
             <div class="triangle"></div>
             <div class="img">
-              <img src="/img/icons/specialites.svg" alt="">
+              <svg width="40px" height="40px">
+                <use xlink:href="/img/icons/sprite.svg#specialites"></use>
+              </svg>
             </div>
             <span>
               specialites
@@ -334,7 +336,9 @@
           <li class="toggle-item--desktop">
             <div class="triangle"></div>
             <div class="img">
-              <img src="/img/icons/appetizers.svg" alt="">
+              <svg width="40px" height="40px">
+                <use xlink:href="/img/icons/sprite.svg#appetizers"></use>
+              </svg>
             </div>
             <span>
               appetizers
@@ -343,7 +347,9 @@
           <li class="toggle-item--desktop">
             <div class="triangle"></div>
             <div class="img">
-              <img src="/img/icons/main-meals.svg" alt="">
+              <svg width="40px" height="40px">
+                <use xlink:href="/img/icons/sprite.svg#main-meals"></use>
+              </svg>
             </div>
             <span>
               main-meals
@@ -352,7 +358,9 @@
           <li class="toggle-item--desktop">
             <div class="triangle"></div>
             <div class="img">
-              <img src="/img/icons/desserts.svg" alt="">
+              <svg width="40px" height="40px">
+                <use xlink:href="/img/icons/sprite.svg#desserts"></use>
+              </svg>
             </div>
             <span>
               desserts
@@ -361,7 +369,9 @@
           <li class="toggle-item--desktop">
             <div class="triangle"></div>
             <div class="img">
-              <img src="/img/icons/drink.svg" alt="">
+              <svg width="40px" height="40px">
+                <use xlink:href="/img/icons/sprite.svg#drink"></use>
+              </svg>
             </div>
             <span>drink</span>
           </li>
@@ -369,7 +379,7 @@
       </div>
     </section>
 
-    <section class="booking">
+    <section class="booking" id="booking">
       <div class="container">
         <div class="booking__wrapper">
           <div class="booking-column">
@@ -388,7 +398,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="footer-wrapper">
       <div class="map"></div>
 
@@ -429,7 +439,7 @@
 
   <section class="booking-form">
         <form class="form" action="#" method="POST">
-          <button class="button form-button-close"></button>
+          <a class="button form-button-close"></a>
           <label class="visually-hidden" for="name">Имя</label>
           <input class="form-item" type="text" name="name" id="name" placeholder="Имя" required>
 
