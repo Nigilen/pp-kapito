@@ -311,7 +311,7 @@
 
             
             <ul class="toggles-list">
-              <li class="toggles-item">1</li>
+              <li class="toggles-item"><span>1</span></li>
               <li class="toggles-item">2</li>
               <li class="toggles-item">3</li>
               <li class="toggles-item">4</li>
@@ -322,11 +322,49 @@
       </div>
       <div class="menu-toggles--desktop">
         <ul class="toggles--desktop">
-          <li class="toggle-item--desktop">1</li>
-          <li class="toggle-item--desktop">2</li>
-          <li class="toggle-item--desktop">3</li>
-          <li class="toggle-item--desktop">4</li>
-          <li class="toggle-item--desktop">5</li>
+          <li class="toggle-item--desktop">
+            <div class="triangle"></div>
+            <div class="img">
+              <img src="/img/icons/specialites.svg" alt="">
+            </div>
+            <span>
+              specialites
+            </span>
+          </li>
+          <li class="toggle-item--desktop">
+            <div class="triangle"></div>
+            <div class="img">
+              <img src="/img/icons/appetizers.svg" alt="">
+            </div>
+            <span>
+              appetizers
+            </span>
+          </li>
+          <li class="toggle-item--desktop">
+            <div class="triangle"></div>
+            <div class="img">
+              <img src="/img/icons/main-meals.svg" alt="">
+            </div>
+            <span>
+              main-meals
+            </span>
+          </li>
+          <li class="toggle-item--desktop">
+            <div class="triangle"></div>
+            <div class="img">
+              <img src="/img/icons/desserts.svg" alt="">
+            </div>
+            <span>
+              desserts
+            </span>
+          </li>
+          <li class="toggle-item--desktop">
+            <div class="triangle"></div>
+            <div class="img">
+              <img src="/img/icons/drink.svg" alt="">
+            </div>
+            <span>drink</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -389,8 +427,48 @@
     </div>
   </footer>
 
+  <section class="booking-form">
+        <form class="form" action="#" method="POST">
+          <button class="button form-button-close"></button>
+          <label class="visually-hidden" for="name">Имя</label>
+          <input class="form-item" type="text" name="name" id="name" placeholder="Имя" required>
+
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input class="form-item" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+
+          <label class="visually-hidden" for="date">Date</label>
+          <input class="form-item" type="date" name="date" id="date" required>
+
+          <label class="visually-hidden" for="time">Time</label>
+          <input class="form-item" type="time" name="time" id="time" placeholder="Time" required>
+          <div class="guests-list">
+            <label class="guest-item" for="adults">Количество взрослых
+              <select class="form-item" type="text" name="adults" id="adults" placeholder="Взрослых" required>
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+  
+            <label class="guest-item" for="childrens">Количество детей
+              <select class="form-item" type="text" name="childrens" id="childrens" placeholder="Детей">
+                <option selected value="1" >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+          </div>
+
+          <button class="button form-button" type="submit">Забронировать столик</button>
+        </form>
+  </section>
+
   <script src="/js/common.js"></script>
+  <script src="/js/menu.js"></script>
   <script src="/js/burger.js"></script>
   <script src="/js/tabsMenu.js"></script>
+  <script src="/js/modal.js"></script>
 </body>
 </html>
