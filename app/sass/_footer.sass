@@ -10,16 +10,70 @@
     margin: 0 auto
 
 .map
+  position: relative
   background-image: url('/img/map.png')  
   background-position: center
   background-repeat: no-repeat
-  background-size: 100%
-  filter: invert(.2)
+  background-size: contain
+  & span
+    position: absolute
+    top: 53%
+    left: 28%
+    display: block
+    width: 30px
+    height: 30px
+    color: #eea560c5
+    font-weight: 600
+    
+    &::before
+      content: ""
+      position: absolute
+      top: 95%
+      left: -30%
+      display: block
+      width: 5px
+      height: 5px
+      border-radius: 50%
+      background-color: #eea5609a
+
+    &::after
+      content: ""
+      position: absolute
+      top: 95%
+      left: -30%
+      display: block
+      width: 3px
+      height: 3px
+      border: 1px solid #eea560c5
+      border-radius: 50%
+      
+      background-color: transparent 
+      animation-name: waterCircle
+      animation-duration: 2s
+      animation-iteration-count: infinite
+
+
+@keyframes waterCircle
+  0% 
+    transform: scale(1) 
+    box-shadow: 0px 0px 0 1px black, 0px 0px 0 2px #eea56083
+  25%
+    opacity: 40%
+    
+  50%
+    transform: scale(5) 
+    opacity: 0
+  100% 
+    transform: scale(1)
+    opacity: 0
+    
+    
 
 .contacts
   display: grid
   grid-template-rows: auto
   justify-content: center
+  justify-items: center
   row-gap: 30px
   &-item
     padding: 5px;
@@ -27,18 +81,30 @@
 .adress-list,
 .shedule-list,
 .social-list 
+  display: grid
+  row-gap: 10px
   margin: 0
   padding: 0
   width: max-content
   list-style: none
   font-size: 12px
   color: #919191
+  
 
 .social-list
-  justify-self: center
+  display: grid
+  grid-template-columns: repeat(2, minmax(20px, 80px))
+  row-gap: 10px
+  justify-items: center
   & a 
+    padding: 5px
     text-decoration: none
     color: #919191
+
+
+.shedule-item
+  display: grid
+  grid-template-columns: auto auto
 
 .shedule__time 
   margin: 0
