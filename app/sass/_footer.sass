@@ -111,7 +111,7 @@
 
 .bottom
   display: grid
-  grid-template-columns: 80%
+  grid-template-columns: 150px
   row-gap: 40px
   justify-content: center
   justify-items: center
@@ -123,9 +123,12 @@
 @media screen and ( min-width: 900px )
   .footer-wrapper 
     grid-template-rows: repeat(2, auto)
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: repeat(2, 1fr)
     justify-items: stretch
     row-gap: 50px
+    & .logo
+      width: 100px
+
   
   .contacts
     padding: 40px 40px 30px 40px
